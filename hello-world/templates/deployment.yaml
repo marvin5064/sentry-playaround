@@ -1,17 +1,26 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: hello-world
+  name: webapp
 spec:
-  replicas: 1
   template:
     metadata:
       labels:
-        app: hello-world
+        app: webapp
     spec:
       containers:
-        - name: hello-world
-          image: gcr.io/google-samples/node-hello:1.0
-          ports:
-            - containerPort: 8080
-              protocol: TCP
+      - image: xcoulon/go-url-shortener:0.1.0
+        name: go-url-shortener
+        env:
+        - name: POSTGRES_HOST
+          value: postgres
+        - name: POSTGRES_PORT
+          value: "5432"
+        - name: POSTGRES_DATABASE
+          value: url_shortener_db
+        - name: POSTGRES_USER
+          value: user
+        - name: POSTGRES_PASSWORD
+          value: mysecretpassword
+        ports:
+        - containerPort: 8080

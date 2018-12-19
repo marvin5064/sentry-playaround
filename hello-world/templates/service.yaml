@@ -1,12 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-world
+  name: webapp
 spec:
   type: NodePort
   ports:
-  - port: 8080
-    targetPort: 8080
-    protocol: TCP
+    - nodePort: 31317
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
   selector:
-    app: hello-world
+    app: webapp
