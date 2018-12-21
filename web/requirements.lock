@@ -1,0 +1,6 @@
+dependencies:
+- name: db
+  repository: file://../db
+  version: 1.0.0
+digest: sha256:b2dd27a3e70964e50c2b1509a540150fbff1f2fa979d882025c5a2601015d2a8
+generated: 2018-12-21T23:23:04.736413+08:00
