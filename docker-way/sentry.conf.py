@@ -247,6 +247,14 @@ SENTRY_WEB_OPTIONS = {
     # 'workers': 3,  # the number of web workers
 }
 
+SENTRY_FEATURES['auth:register'] = False
+# SSO ON our OFF
+SENTRY_FEATURES['organizations:sso'] = True
+SENTRY_FEATURES['organizations:sso-saml2'] = True
+SENTRY_FEATURES['organizations:sso-rippling'] = True
+
+GITHUB_APP_ID = "8a6906ab2bd5f701ddf9"
+GITHUB_API_SECRET = "ec45b1353289ec2c666457841f4416c455e6d2a3"
 ###############
 # Mail Server #
 ###############
