@@ -1,0 +1,11 @@
+{
+  "name": "error-gen",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "marvin",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "raven": "^2.6.4"
+  }
+}
